@@ -1,0 +1,605 @@
+/*=========================== */
+/*Color global variables */
+/*=========================== */
+*{
+	-fx-primary-bg-color: #eee;
+	-fx-primary-text-color:black;
+	-fx-secondary-text-color:#3180bc;
+	-fx-input-bg-color: #879bab;
+}
+
+.root{
+}
+
+.title{
+	-fx-font: 30.0px "Berlin Sans FB";
+}
+
+.subtitle{
+	-fx-font: 20.0px "Berlin Sans FB";
+}
+
+.fields{
+	-fx-font: 16.0px "Berlin Sans FB";
+}
+
+/*=========================== */
+/*Global Styling */
+/*=========================== */
+/* Tab pane style */
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0.0;
+}
+
+.tab{
+    -fx-background-insets: 0.0 1.0 0.0 1.0,0.0,0.0;
+}
+.tab-pane .tab
+{
+    -fx-background-color: #e6e6e6;
+
+}
+
+.tab-pane .tab:selected
+{
+    -fx-background-color: #3c3c3c50;
+}
+
+.tab .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: #828282;
+    -fx-font-size: 12.0px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill:-fx-secondary-text-color;
+}
+.tab-pane:top *.tab-header-area {
+    -fx-background-insets: 0.0, 0.0 0.0 1.0 0.0;
+    -fx-padding: 0.416667em 0.166667em 0.0em 0.0em;
+}
+
+/* End tab pane styling */
+/*=========================== */
+/* Scroll pane styling */
+
+.scroll-pane {
+    -fx-background-insets: 0.0;
+    -fx-padding: 0.0;
+    -fx-background:-fx-primary-bg-color;
+}
+.scroll-pane:focused {
+    -fx-background-insets: 0.0;
+}
+
+.scroll-pane .corner {
+    -fx-background-insets: 0.0;
+}
+
+/* End scroll pane styling */
+/*=========================== */
+/* Text field styling */
+
+.text-field {
+    -fx-background-color: #fff;
+    -fx-border-width:0.0;
+    -fx-padding: 5.0;
+    -fx-font-size: 14.0px;
+    -fx-font-family: "Berlin Sans FB";
+}
+
+.text-field:focused {
+    -fx-background-color: -fx-secondary-text-color;
+    -fx-text-fill:#fff;
+}
+
+/* End text field styling */
+/*=========================== */
+/* Button styling */
+
+.button{
+	-fx-background-color: transparent;
+	-fx-border-width: 1.0;
+    -fx-border-radius: 5.0;
+    -fx-border-color: -fx-primary-text-color;
+    -fx-padding: 5.0 10.0;
+}
+
+.button:hover{
+	-fx-background-color: -fx-secondary-text-color;
+	-fx-background-radius: 5.0;
+}
+
+.button:pressed{
+	-fx-scale-x: 0.9;
+	-fx-scale-y: 0.9;
+}
+/* End button styling */
+/*=========================== */
+/* Date picker styling */
+
+.date-picker:focused{
+	-fx-background-color:white;
+	-fx-border-width:0.0;
+}
+.date-picker .combo-box {
+	-fx-background-insets:0.0px ;
+	-fx-border-width: 0.0px;
+}
+ 
+.date-picker .text-field{
+	-fx-background-radius:0.0px ;
+	-fx-border-color: transparent;
+}
+
+.date-picker .arrow-button{
+	-fx-background-radius:0.0px ;
+	-fx-background-color: #eee;
+}
+
+.date-picker .arrow-button .arrow{
+	-fx-background-radius:0.0px ;
+	-fx-background-color: black;
+}
+
+.date-picker .arrow-button:hover .arrow{
+	-fx-background-radius:0.0px ;
+	-fx-background-color: -fx-secondary-text-color;
+}
+
+ .date-picker .button {
+-fx-background-color: transparent;
+	-fx-border-color:transparent;
+	-fx-pref-height: 35.0px;
+	-fx-pref-width: 35.0px;
+}
+
+ .date-picker .button:hover {
+	-fx-border-color:transparent;
+	-fx-pref-height: 35.0px;
+	-fx-pref-width: 35.0px;
+}
+
+.date-picker .button .arrow:pressed {
+	-fx-border-color:transparent;
+	-fx-pref-height: 35.0px;
+	-fx-pref-width: 35.0px;
+}
+
+ .date-picker .cell {
+	-fx-background-color: white;
+	-fx-pref-width:20.0px ;
+	-fx-pref-height:25.0px ;
+}
+
+.date-picker .cell:hover {
+	-fx-background-color: -fx-secondary-text-color;
+	-fx-pref-width:20.0px ;
+	-fx-pref-height:25.0px ;
+}
+
+.date-picker .cell:focused {
+	-fx-background-color:#11659e;
+	-fx-pref-width:20.0px ;
+	-fx-pref-height:25.0px ;
+}
+
+.date-picker-popup  {
+	-fx-border-color: #1783CC;
+	-fx-background-color: black;
+}
+ 
+ /* End date picker styling */
+ /*=========================== */
+ /* Combo box styling */
+ 
+.combo-box{
+    -fx-border-color:#E6E6E6;
+    -fx-border-style:solid;
+    -fx-border-width:1.0;
+}
+.combo-box .text-field:focused{
+    -fx-background-color: -fx-secondary-text-color;
+    -fx-text-fill:-fx-primary-text-color;
+	-fx-border-width:0.0;
+	-fx-border-radius: 0.0;
+}
+.combo-box .text-field{
+	-fx-background-color:white;
+	-fx-border-width:0.0;
+}
+.combo-box .arrow{
+    -fx-background-color:#2478E9;
+}
+.combo-box .arrow-button{
+    -fx-background-color:white;
+    -fx-border-style:none;
+}
+.combo-box .arrow-button{
+    -fx-background-color:white;
+}
+.combo-box .list-cell{
+    -fx-background-color:white;
+}
+.combo-box .list-cell:hover{
+	-fx-background-color: -fx-secondary-text-color;
+	-fx-fill-text: white;
+}
+
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected {
+    -fx-background-color: -fx-secondary-text-color !important;
+}
+/* End combo box styling */
+/*=========================== */
+/*End Global Styling */
+/*=========================== */
+
+#btn{
+	-fx-border-width: 1.0;
+	-fx-border-color:-fx-primary-text-color;
+	-fx-border-radius: 40.0;
+	-fx-text-fill: -fx-primary-text-color;
+	-fx-cursor: hand;
+	-fx-padding: 10.0 35.0;
+}
+
+#btn:hover{
+	-fx-background-color: -fx-secondary-text-color;
+	-fx-background-radius: 40.0;
+}
+
+#order{
+	-fx-border-width: 1.0;
+	-fx-border-color: -fx-primary-text-color;
+	-fx-border-radius: 3.0;
+	-fx-text-fill: -fx-primary-text-color;
+	-fx-curosr: hand;
+	-fx-padding: 3.0 27.32;
+	-fx-background-color: -fx-secondary-text-color;
+	-fx-background-radius: 5.0;
+	-fx-translate-x: -27.6;
+	-fx-translate-y: -5.5;	
+}
+
+#order:hover{
+	-fx-background-color: -fx-primary-bg-color;
+	-fx-text-fill:-fx-primary-text-color;
+}
+
+#menuBtn{
+	-fx-border-width: 1.0;
+	-fx-border-color: -fx-primary-text-color;
+	-fx-border-radius: 40.0;
+	-fx-cursor: hand;
+	-fx-pref-width: 300.0;
+}
+
+#menuBtn:hover{
+	-fx-background-color: -fx-secondary-text-color;
+	-fx-background-radius: 40.0;
+}
+
+#optionalBtn{
+	-fx-border-width: 1.0;
+	-fx-border-color: -fx-primary-text-color;
+	-fx-border-radius: 40.0;
+	-fx-text-fill: -fx-primary-text-color;
+	-fx-cursor: hand;
+	-fx-padding: 10.0 0.0;
+	-fx-alignment: center;
+	-fx-pref-width: 200.0;
+	-fx-font: 14.0px "Berlin Sans FB";
+}
+
+#optionalBtn:hover{
+	/*-fx-background-color: #04cca1;*/
+	-fx-background-color: -fx-secondary-text-color;
+	-fx-background-radius: 40.0;
+}
+
+#clickedBG{
+	-fx-border-width: 1.0;
+	-fx-border-color: -fx-primary-text-color;
+	-fx-border-radius: 40.0;
+	-fx-cursor: hand;
+	-fx-padding: 10.0 0.0;
+	-fx-alignment: center;
+	-fx-pref-width: 200.0;
+	-fx-background-color:-fx-secondary-text-color;
+	-fx-background-radius: 40.0;
+	-fx-font: 14.0px "Berlin Sans FB";
+}
+
+.plusMinus{
+	-fx-border-width: 1.0;
+	-fx-border-color: -fx-primary-text-color;
+	-fx-border-radius: 40.0;
+	-fx-text-fill: -fx-primary-text-color;
+	-fx-cursor: -fx-default-hand-cursor;
+	-fx-padding: 0.0 10.0;
+	-fx-alignment: center;
+	-fx-translate-y: 338.0;
+	-fx-font: 24.0px "Berlin Sans FB";
+}
+
+#addItem{
+	-fx-border-width:1.0;
+	-fx-border-color: -fx-primary-text-color;
+	-fx-border-radius: 40.0;
+	-fx-text-fill: -fx-primary-text-color;
+	-fx-cursor: hand;
+	-fx-padding: 10.0 35.0;
+	-fx-alignment: center;
+	-fx-translate-x: 535.0;
+	-fx-translate-y: 320.0;
+}
+
+.plusMinus:hover, #addItem:hover{
+	-fx-background-color:-fx-secondary-text-color;
+	-fx-background-radius: 40.0;
+}
+
+.plus{
+	-fx-translate-x:298.0;
+}
+
+.minus{
+	-fx-translate-x:372.0;
+}
+
+.text-area .viewport, .text-area .content {
+    -fx-background-color: transparent ;
+}
+
+
+#active{
+	-fx-border-width: 0.0 0.0 2.0 0.0;
+	-fx-border-color: -fx-secondary-text-color;
+	-fx-fill: -fx-secondary-text-color;
+	-fx-underline: true;
+	-fx-padding: 0.0 0.0 3.0 0.0;
+}
+
+#link{
+	-fx-cursor: hand;
+}
+
+#link:hover{
+	-fx-border-width: 0.0 0.0 2.0 0.0;
+	-fx-border-color: -fx-secondary-text-color;
+	-fx-fill: -fx-secondary-text-color;
+	-fx-underline: true;
+	-fx-padding: 0.0 0.0 3.0 0.0;
+}
+
+
+#background{
+	/*-fx-background: #006875;*/
+	-fx-background: -fx-primary-bg-color;
+}
+
+#scrollPane{
+	-fx-background:-fx-primary-bg-color;
+}
+
+.padding{
+	-fx-padding: 10.0 10.0;
+}
+
+/*=========================== */
+/* Menu styling: */
+/*=========================== */
+.menuTitle{
+	-fx-translate-x: 35.0;
+	-fx-translate-y: 140.0;
+}
+
+.overylayPriceLayout{
+	-fx-translate-x: 250.0;
+}
+
+.overlayLayout{
+	-fx-translate-x:71.0;
+	-fx-translate-y:105.0;
+	-fx-effect: dropshadow(three-pass-box, rgba(0.0,0.0,0.0,0.5),10.0,0.0,0.0,0.0);
+	-fx-background-color:-fx-primary-bg-color;
+	-fx-pref-height: 375.0;
+	-fx-pref-width: 689.0;
+}
+
+.counter{
+	-fx-text-fill:-fx-primary-text-color;
+	-fx-translate-x:346.0;
+	-fx-translate-y:338.0;
+	-fx-font: 22.0px "Berlin Sans FB";
+}
+
+.close{
+	-fx-text-fill: red;
+	-fx-cursor: hand;
+	-fx-translate-x:650.0;
+	-fx-translate-y: 15.0;
+	-fx-font: 22.0px "Berlin Sans FB";
+}
+
+.line{
+	-fx-stroke: -fx-primary-text-color;
+	-fx-scale-x:1.0;
+	-fx-scale-y:1.0;
+	-fx-translate-x:134.0;
+	-fx-translate-y: 51.0;
+}
+
+.componentTitle{
+	-fx-text-fill:-fx-primary-text-color;
+	-fx-translate-x:41.0;
+	-fx-translate-y:15.0;
+	-fx-font: 30.0px "Berlin Sans FB";
+}
+
+.componentContent{
+	-fx-max-height: 260.0;
+	-fx-pref-width: 230.0;
+	-fx-translate-x:30.0;
+	-fx-translate-y: 100.0;
+}
+
+.componentDescription{
+	-fx-text-fill:-fx-primary-text-color;
+	-fx-translate-x:41.0;
+	-fx-translate-y:61.0;
+	-fx-font: 14.0px "Berlin Sans FB";
+}
+
+.productPrice{
+	-fx-text-fill: -fx-primary-text-color;
+	-fx-translate-x: 575.0;
+	-fx-translate-y: 290.0;
+	-fx-font: 14.0px "Berlin Sans FB";
+}
+
+.selected{
+	-fx-effect: dropshadow(three-pass-box, rgba(49.0, 128.0, 188.0,0.8),10.0,0.3,0.0,0.0);
+}
+
+.removeBtn{
+	-fx-border-width: 1.0;
+	-fx-border-color: -fx-primary-text-color;
+	-fx-border-radius: 40.0;
+	-fx-text-fill: red;
+	-fx-cursor: hand;
+	-fx-padding: 10.0 35.0;
+}
+
+.removeBtn:hover{
+	-fx-background-color:#ff000050;
+	-fx-background-radius:40.0;
+}
+
+.noComponents{
+	-fx-text-fill: -fx-primary-text-color;
+	-fx-translate-x:30.0;
+	-fx-translate-y: 215.0;
+	-fx-font: 16.0px "Berlin Sans FB";
+}
+
+.defaultTitle{
+	-fx-text-fill:-fx-primary-text-color;
+	-fx-font: 14.0px "Berlin Sans FB";	
+}
+
+#txtarea{
+	-fx-border-width:1.0;
+	-fx-border-color: -fx-primary-text-color;
+	-fx-border-radius: 10.0;
+	-fx-text-fill:-fx-primary-text-color;
+	-fx-background-color: -fx-primary-bg-color;
+	-fx-background-radius: 10.0;
+	-fx-pref-width: 250.0;
+	-fx-pref-height: 100.0;
+	-fx-translate-x: 384.0;
+	-fx-translate-y: 108.0;
+}
+
+.textAreaTitle{
+	-fx-text-fill: -fx-primary-text-color;
+	-fx-translate-x: 384.0;
+	-fx-translate-y: 85.0;
+	-fx-font: 16.0px "Berlin Sans FB";	
+}
+
+/*=========================== */
+/* End Menu Styling */
+/*=========================== */
+
+/*=========================== */
+/* Cart Styling */
+/*=========================== */
+.toRemove{
+	-fx-background-color:#ff000050;
+	-fx-background-radius: 40.0;
+}
+
+.toRemove:hover{
+	-fx-background-color:#ff000050;
+	-fx-background-radius: 40.0;
+}
+
+/*=========================== */
+/* End Cart Styling */
+/*=========================== */
+
+/*=========================== */
+/* Call to action button styling*/
+/*=========================== */
+
+#cta{
+	-fx-border-width:5.0;
+	-fx-border-color: #0d3354;
+	-fx-border-radius: 5.0;
+	-fx-text-fill: black; 
+	-fx-background-color:#eee;
+	-fx-padding: 10.0 20.0;
+	-fx-font-size: 18.0;
+	-fx-font-family: "Berlin Sans FB";
+	-fx-translate-x: -20.0;
+	-fx-translate-y: -5.0;
+}
+
+
+#cta:hover{
+	-fx-border-radius: 5.0;
+	-fx-background-color: #0d3354;
+	-fx-background-radius: 5.0;
+	-fx-text-fill: #fff; 
+}
+
+/*=========================== */
+/* End call to action button styling*/
+/*=========================== */
+
+/*=========================== */
+/* Review order styling*/
+/*=========================== */
+
+.itemsTitle{
+	-fx-translate-x: 120.0;
+	-fx-translate-y: 193.0;	
+}
+
+.orderDisplayScroll{
+	-fx-pref-width: 676.0;
+	-fx-pref-height: 130.0;
+	-fx-translate-x: 100.0;
+	-fx-translate-y: 213.0;	
+}
+
+.deliveryTitle{
+	-fx-translate-x: 120.0;
+	-fx-translate-y: 360.0;
+}
+
+.deliveryInfo{
+	-fx-translate-x: 130.0;
+	-fx-translate-y: 390.0;
+}
+
+.breakDown{
+	-fx-text-fill: #0a62a1;
+	-fx-translate-x: 550.0;
+	-fx-translate-y: 360.0;
+	-fx-font: 20.0px "Berlin Sans FB";	
+}
+
+.totalPrice{
+	-fx-translate-x: 550;
+	-fx-translate-y: 390;
+	-fx-font: 16px "Berlin Sans FB";
+}
+/*=========================== */
+/* End review order styling*/
+/*=========================== */
+
+

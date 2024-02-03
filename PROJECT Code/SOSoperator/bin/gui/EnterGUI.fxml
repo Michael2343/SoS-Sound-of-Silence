@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="585.0" prefWidth="830.0" style="-fx-background-color: #eee;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EnterGuiController">
+   <children>
+      <ImageView fitHeight="192.0" fitWidth="196.0" layoutX="625.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/SOS%20logo.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="73.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Connect to Server" underline="true" wrappingWidth="290.59375">
+         <font>
+            <Font name="Berlin Sans FB" size="32.0" />
+         </font>
+      </Text>
+      <Text layoutX="73.0" layoutY="343.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter IP">
+         <font>
+            <Font name="Berlin Sans FB" size="22.0" />
+         </font>
+      </Text>
+      <TextField fx:id="ipTxt" layoutX="192.0" layoutY="322.0" prefHeight="26.0" prefWidth="172.0" text="192.168.161.63" />
+      <Label id="btn" fx:id="enterBtn" layoutX="73.0" layoutY="501.0" onMouseClicked="#enterApplication" text="Enter">
+         <font>
+            <Font name="Berlin Sans FB" size="22.0" />
+         </font>
+      </Label>
+      <Label id="btn" fx:id="exitBtn" layoutX="666.0" layoutY="488.0" onMouseClicked="#closeApplication" text="Exit">
+         <font>
+            <Font name="Berlin Sans FB" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

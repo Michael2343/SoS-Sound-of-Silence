@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="585.0" prefWidth="871.0" style="-fx-background-color: #eee;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.IncidentLogController">
+   <children>
+      <ImageView fx:id="icon" fitHeight="170.0" fitWidth="186.0" layoutX="683.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/SOS%20logo.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="headLabel" fill="#ec0a0a" layoutX="211.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Incident Log" wrappingWidth="432.49029541015625">
+         <font>
+            <Font name="Berlin Sans FB" size="72.0" />
+         </font>
+      </Text>
+      <Text fx:id="instructions" fill="#016922" layoutX="71.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please double click on the relevent incident:" wrappingWidth="450.3203125">
+         <font>
+            <Font name="Berlin Sans FB" size="18.0" />
+         </font>
+      </Text>
+      <TableView fx:id="approvalTable" layoutX="57.0" layoutY="235.0" onMousePressed="#copyTableData" prefHeight="316.0" prefWidth="614.0">
+         <columns>
+            <TableColumn fx:id="incident_Number" prefWidth="123.0" text="Incident Number" />
+            <TableColumn fx:id="id" prefWidth="131.0" text="ID" />
+            <TableColumn fx:id="startTime" prefWidth="140.80001220703127" text="Start Time" />
+            <TableColumn fx:id="status" prefWidth="123.0" text="Status" />
+         </columns>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</AnchorPane>
